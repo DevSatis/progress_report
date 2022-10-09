@@ -1,0 +1,32 @@
+.cDetails{
+    margin-top: 20px;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.dropdown{
+    border-radius: 4px;
+    width: 200px;
+    height: 32px;
+    background-color: #eeeeee;
+    
+}
+.backButton{
+    width: 36px;
+    height: 32px;
+    margin-left: 21px;
+    margin-right: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+.courseName{
+    margin-left: 10px;
+    margin-right: 20px;
+     
+}
+.courseGroup{
+   cursor: pointer;
+}
