@@ -1,12 +1,10 @@
-import ContentBody from "./components/contentBody/ContentBody";
-import Topbar from "./components/topbar/Topbar";
-
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-     <Topbar />
-     <ContentBody />
+     <Navbar />
+    
     </div>
   );
 }
