@@ -5,9 +5,10 @@ import Chart from "react-apexcharts";
 
 const PieChart = () => {
 
-    const [clssName, setclssName] = useState("");
-    const [numberOfStudents, setNumberOfStudents] = useState(0);
+    const [clssName, setclssName] = useState("");// All the class name will get rendered using this line
+    const [numberOfStudents, setNumberOfStudents] = useState(0);//For number of learner in a class
 
+    //For calling the API and storing the data in useState hook from the backend server
     useEffect(()=>{
 
       const classes = [];
@@ -22,6 +23,7 @@ const PieChart = () => {
         }
         setclssName(classes);
         setNumberOfStudents(studentCount)
+        console.log(studentCount);
       }
       getStudentsData()
 
@@ -29,25 +31,23 @@ const PieChart = () => {
 
   return (
     <div className="piechart">
-      <div>
-        <h2>Total number of students</h2>
-        <h1>450</h1>
-      </div>
-      <hr></hr>
-        <Chart 
+       <Chart 
           type="pie"
-          width={400}
-          height={500}
+          width={250}
+          height={300}
           series = {numberOfStudents}
           options={
             {
               title:{
-                text:"Total Number of students"
+                text:`Total Number of students`
               },
               noData:{
                 text:"Empty Data"
               },
               labels:clssName,
+              legend:{
+                position:"top",
+              }
             }
           }
 
