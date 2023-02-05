@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import "./LineGraphLogins.css";
 
-const LineGraph = () => {
+const LineGraphLogins = () => {
+
+  const [clssName, setClssName ] = useState([]); // we have to pass the array of object to series
+
+  // this hook is used for getting the data from the server and then passing it to useState as a array of objects
+  useEffect(()=>{
+    const getStudentsCounts = async()=>{
+
+      const clasName = [];
+      
+      const reqData = await fetch("Date wise students data's API");
+      const resData = await reqData.json();
+      console.log(resData);
+
+      for(let i = 0; i<resData.length; i++){
+        clasName.push({name: resData[i].clasName, data:resData[i].monthwiseStudentsCount});
+      }
+      setClssName(clasName);
+    }
+    getStudentsCounts();
+  },[]);
+
+
+  
   return (
     <div className="linegraph">
       <div className="title">
@@ -16,10 +39,10 @@ const LineGraph = () => {
         type="line"
         width={690}
         height={400}
-        series={[
+        series={[ // write here the array of object i.e (clssName) which we will get from useEffect
           {
             name: "Class A",
-            data: [20, 14, 50, 10, 98],
+            data: [20, 14, 50, 120, 98],
           },
           { name: "Class B", data: [0, 21, 67, 38, 10] },
           {
@@ -35,6 +58,9 @@ const LineGraph = () => {
           legend: {
             position: "top",
             horizontalAlign: "right",
+          },
+          stroke:{
+            width:1.5,
           },
 
           xaxis: {
@@ -60,4 +86,4 @@ const LineGraph = () => {
   );
 };
 
-export default LineGraph;
+export default LineGraphLogins;

@@ -31,16 +31,16 @@ const PieChart = () => {
 
   return (
     <div className="piechart">
+      <div className="title">
+        <h4>Total number of students</h4>
+      </div>
        <Chart 
           type="pie"
           width={250}
-          height={300}
+          height={400}
           series = {numberOfStudents}
           options={
             {
-              title:{
-                text:`Total Number of students`
-              },
               noData:{
                 text:"Empty Data"
               },

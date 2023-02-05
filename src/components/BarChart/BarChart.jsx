@@ -1,13 +1,16 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import "./BarChart.css"
+import "./BarChart.css";
 
 const BarChart = () => {
   return (
     <div className="barchart">
+      <div className="title">
+        <h4>Total number of logins and signups</h4>
+      </div>
       <Chart
         type="bar"
-        width={250}
+        width={200}
         height={400}
         series={[
           {
@@ -15,13 +18,10 @@ const BarChart = () => {
             data: [300, 150],
           },
         ]}
+        
         options={{
-            columnWidth: "20%",
           toolbar: {
-              show: false
-            },
-          title: {
-            text: `Total number of logins and sign ups`,
+            show: false,
           },
           noData: {
             text: "Empty Data",
@@ -36,7 +36,7 @@ const BarChart = () => {
           },
           legend: {
             position: "top",
-            horizontalAlign:"left",
+            horizontalAlign: "left",
           },
         }}
       />

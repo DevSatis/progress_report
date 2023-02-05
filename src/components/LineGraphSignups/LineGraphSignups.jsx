@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import "./LineGraphSignups.css";
 
-const LineGraph = () => {
+const LineGraphSignups = () => {
+  const [clssName, setClssName] = useState();
+  const [studentCount, setStudentCount] = useState();
+
   return (
     <div className="linegraph">
       <div className="title">
@@ -28,7 +31,7 @@ const LineGraph = () => {
           },
           {
             name: "Class D",
-            data: [87, 65, 99, 10, 110],
+            data: [87, 65, 99, 110, 110],
           },
         ]}
         options={{
@@ -60,4 +63,4 @@ const LineGraph = () => {
   );
 };
 
-export default LineGraph;
+export default LineGraphSignups;
