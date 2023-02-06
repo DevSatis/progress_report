@@ -27,7 +27,7 @@ const PieChart = () => {
       }
       getStudentsData()
 
-    },[])
+    },[]);
 
   return (
     <div className="piechart">
@@ -37,7 +37,7 @@ const PieChart = () => {
        <Chart 
           type="pie"
           width={250}
-          height={400}
+          height={300}
           series = {numberOfStudents}
           options={
             {

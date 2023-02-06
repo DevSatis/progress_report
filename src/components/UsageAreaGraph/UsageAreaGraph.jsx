@@ -16,7 +16,7 @@ const UsageAreaGraph = () => {
       <Chart
         type="area"
         width={"100%"}
-        height={"auto"}
+        height={"400"}
         series={[
           {
             name: "Class A",

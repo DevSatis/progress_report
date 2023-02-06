@@ -7,6 +7,8 @@
     margin-left: 10px;
     padding-left: 2px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1{
@@ -14,14 +16,30 @@ h1{
 }
 .enrollment{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 5px;
-
+    margin: 10px; 
 }
 p{
     font-size: 12px;
     color: gray;
     margin: 10px 0  10px 0;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+.dbtn{
+    display: flex;
+    font-size: 14px;
+    padding: 5px 8px 4px 8px;
+    border-radius: 3px;
+    border: 1px solid #666;
+    background-color: white;
+    cursor: pointer;
+    gap: 4px;
+    align-items: center;
+    height: 27px;
 }
 .pie{
     background-color: white;
@@ -41,6 +59,14 @@ p{
     align-items: center;
     justify-content: center;
 }
+.donut{
+    background-color: white;
+    padding: 10px;
+    gap:10px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
 .line{
     background-color: white;
     padding: 10px;
@@ -48,7 +74,7 @@ p{
     margin-bottom: 10px;
     margin-right: 10px;
     border: 1px solid lightgray;
-    border-radius:  0 5px 5px 0;
+    border-radius:  5px;
 }
 
 .middle{

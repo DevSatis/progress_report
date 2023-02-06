@@ -37,8 +37,8 @@ const LineGraphLogins = () => {
       </div>
       <Chart
         type="line"
-        width={690}
-        height={400}
+        width={940}
+        height={300}
         series={[ // write here the array of object i.e (clssName) which we will get from useEffect
           {
             name: "Class A",
