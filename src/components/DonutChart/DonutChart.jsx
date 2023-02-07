@@ -10,7 +10,7 @@ const DonutChart = () => {
       </div>
        <Chart 
           type="donut"
-          width={250}
+          width={"100%"}
           height={300}
           series = {[30, 50 , 60, 90]}
           options={

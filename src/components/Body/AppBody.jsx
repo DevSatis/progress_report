@@ -7,6 +7,7 @@ import "./AppBody.css";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
 import { useState } from "react";
 import DonutChart from "../DonutChart/DonutChart";
+import FusionChart from "../FusionCHart/FusionChart";
 
 const AppBody = () => {
   const [arrayData, setArrayData] = useState(null);
@@ -50,6 +51,9 @@ const AppBody = () => {
       </div>
       <div className="bottom">
         <UsageAreaGraph />
+      </div>
+      <div className="fusionChart">
+        <FusionChart />
       </div>
     </div>
   );
