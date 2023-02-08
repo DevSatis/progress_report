@@ -52,9 +52,7 @@ const AppBody = () => {
       <div className="bottom">
         <UsageAreaGraph />
       </div>
-      <div className="fusionChart">
-        <FusionChart />
-      </div>
+      
     </div>
   );
 };
