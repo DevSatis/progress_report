@@ -5,7 +5,7 @@ import Chart from "react-apexcharts";
 
 const PieChart = () => {
 
-    const [clssName, setclssName] = useState("");// All the class name will get rendered using this line
+    const [clssName, setclssName] = useState("");
     const [numberOfStudents, setNumberOfStudents] = useState(0);//For number of learner in a class
 
     //For calling the API and storing the data in useState hook from the backend server
